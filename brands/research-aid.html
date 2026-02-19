@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Aid — Learn, Don't Outsource</title>
+  <meta name="description" content="Research Aid guides undergraduates through research projects with clarity, confidence, and academic integrity." />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .brand-hero {
+      min-height: 50vh;
+      display: flex; align-items: flex-end;
+      padding: 8rem 0 5rem;
+      background: linear-gradient(160deg, #091224 0%, var(--black) 100%);
+      position: relative; overflow: hidden;
+    }
+    .brand-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 70% at 10% 50%, rgba(37,99,235,0.1) 0%, transparent 70%);
+    }
+    .brand-hero__letter {
+      position: absolute; right: 5%; bottom: -2rem;
+      font-family: var(--ff-serif); font-size: clamp(8rem, 18vw, 18rem);
+      color: rgba(37,99,235,0.05); font-weight: 300; line-height: 1; user-select: none;
+    }
+    .brand-section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+    .brand-section:last-of-type { border-bottom: none; }
+    .ra-layout { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: start; }
+    .steps { display: flex; flex-direction: column; gap: 0; margin: 2.5rem 0; }
+    .step { display: flex; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
+    .step:last-child { border-bottom: none; }
+    .step__num { font-family: var(--ff-serif); font-size: 2rem; color: rgba(37,99,235,0.2); font-weight: 300; line-height: 1; min-width: 36px; }
+    .step__title { font-family: var(--ff-serif); font-size: 1.1rem; color: var(--white); margin-bottom: 0.4rem; }
+    .step__text { font-size: 0.85rem; color: var(--muted); line-height: 1.75; }
+    .ra-sidebar { position: sticky; top: 7rem; }
+    .values-list { display: flex; flex-direction: column; gap: 1rem; margin: 2rem 0; }
+    .value-tag {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.1rem 1.5rem; background: var(--deep-blue);
+      border: 1px solid var(--border); border-radius: 2px;
+      font-size: 0.88rem; color: var(--off-white);
+      transition: border-color var(--transition);
+    }
+    .value-tag:hover { border-color: rgba(59,130,246,0.35); }
+    .value-tag::before { content: ''; width: 5px; height: 5px; background: var(--steel-blue); border-radius: 50%; flex-shrink: 0; }
+    @media (max-width: 900px) { .ra-layout { grid-template-columns: 1fr; gap: 2.5rem; } .ra-sidebar { position: static; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../brands.html" class="active">Brands</a></li>
+      <li><a href="../executive-support.html">Executive Support</a></li>
+      <li><a href="../work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="../index.html">Home</a><a href="../work.html">Work</a>
+    <a href="../brands.html">Brands</a><a href="../executive-support.html">Executive Support</a>
+    <a href="../work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="brand-hero">
+    <div class="container">
+      <div style="position: relative; z-index: 2">
+        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--steel-blue); margin-bottom: 1rem;">← <a href="../brands.html" style="color: var(--steel-blue)">All Brands</a></p>
+        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;">Learn, Don't Outsource</p>
+        <h1 style="font-family: var(--ff-serif); font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 300; color: var(--white); line-height: 1;">Research Aid</h1>
+        <p style="margin-top: 1.25rem; font-family: var(--ff-serif); font-style: italic; color: var(--muted); font-size: 1.1rem; max-width: 540px;">Guiding undergraduates through research writing with clarity, confidence, and integrity.</p>
+      </div>
+    </div>
+    <div class="brand-hero__letter">R</div>
+  </section>
+
+  <section class="brand-section" style="background: var(--black);">
+    <div class="container">
+      <div class="ra-layout">
+        <div>
+          <div class="reveal">
+            <p class="section-label">The Origin</p>
+            <h2 class="section-title">Born from personal experience</h2>
+            <p class="section-text">Research Aid was born from overcoming my own fear of research writing. After learning the process and succeeding, it became a space that guides undergraduates through their projects with clarity, confidence, and academic integrity.</p>
+            <p class="section-text" style="margin-top: 1.5rem;">The core belief is simple: every student is capable of doing their own research. They just need the right guidance, the right structure, and the confidence that comes from understanding the process.</p>
+          </div>
+          <div class="steps reveal" data-stagger>
+            <div class="step"><span class="step__num">01</span><div><p class="step__title">Understand the Brief</p><p class="step__text">We start by demystifying the research prompt and identifying exactly what is being asked.</p></div></div>
+            <div class="step"><span class="step__num">02</span><div><p class="step__title">Build the Structure</p><p class="step__text">A clear outline transforms an overwhelming project into a series of manageable sections.</p></div></div>
+            <div class="step"><span class="step__num">03</span><div><p class="step__title">Source &amp; Reference</p><p class="step__text">Learn to find credible sources and reference them correctly, not just cite but understand.</p></div></div>
+            <div class="step"><span class="step__num">04</span><div><p class="step__title">Write with Confidence</p><p class="step__text">Write in your own voice, with your own understanding. That is where real academic work lives.</p></div></div>
+          </div>
+        </div>
+        <div class="ra-sidebar">
+          <div class="card reveal" style="margin-bottom: 1.5rem">
+            <p class="section-label" style="margin-bottom: 1.25rem">Core values</p>
+            <div class="values-list">
+              <div class="value-tag">Clarity over complexity</div>
+              <div class="value-tag">Confidence through understanding</div>
+              <div class="value-tag">Academic integrity, always</div>
+              <div class="value-tag">Student ownership of work</div>
+              <div class="value-tag">Process, not shortcuts</div>
+            </div>
+          </div>
+          <div class="card reveal">
+            <h3 style="font-family: var(--ff-serif); font-size: 1.25rem; color: var(--white); margin-bottom: 0.75rem;">Work with Research Aid</h3>
+            <p style="font-size: 0.85rem; color: var(--muted); line-height: 1.8; margin-bottom: 1.5rem;">For guidance sessions, institutional partnerships, or collaboration enquiries, reach out.</p>
+            <a href="../work-with-me.html" class="btn btn--primary">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Princess Omoragbon — Lifestyle Videographer · Writer · Entrepreneur</title>
+  <meta name="description" content="Princess Omoragbon — Lifestyle Videographer, Video Editor, Writer, and Entrepreneur. Creative work, practical systems." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Hero ─────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 70% 60% at 70% 40%, rgba(17,34,64,0.9) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 50% at 20% 80%, rgba(37,99,235,0.07) 0%, transparent 60%);
+    }
+    .hero__content {
+      position: relative;
+      z-index: 2;
+      padding: 8rem 2.5rem 6rem 2.5rem;
+      max-width: 620px;
+      margin-left: auto;
+      padding-right: 4rem;
+    }
+    .hero__eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--steel-blue);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s ease 0.2s forwards;
+    }
+    .hero__eyebrow::before {
+      content: '';
+      width: 36px; height: 1px;
+      background: var(--steel-blue);
+    }
+    .hero__name {
+      font-family: var(--ff-serif);
+      font-size: clamp(3.5rem, 7vw, 6.5rem);
+      font-weight: 300;
+      line-height: 1.0;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.35s forwards;
+    }
+    .hero__name span {
+      display: block;
+      color: var(--steel-blue);
+      font-style: italic;
+    }
+    .hero__roles {
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.5s forwards;
+    }
+    .hero__roles .dot { color: var(--accent-blue); }
+    .hero__tagline {
+      font-family: var(--ff-serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.6s forwards;
+    }
+    .hero__bio {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.9;
+      max-width: 460px;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.75s forwards;
+    }
+    .hero__actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s ease 0.9s forwards;
+    }
+
+    /* ── Hero Visual ──────────────────────────────────────── */
+    .hero__visual {
+      position: relative;
+      height: 100vh;
+      background: var(--mid-blue);
+      overflow: hidden;
+    }
+    .hero__visual-inner {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(160deg, #0b1a35 0%, #06101e 60%),
+        radial-gradient(ellipse 80% 80% at 50% 60%, rgba(37,99,235,0.18) 0%, transparent 70%);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .hero__portrait {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 340px;
+    }
+    .hero__portrait svg {
+      width: 100%;
+      height: auto;
+      opacity: 0.9;
+    }
+    .hero__visual-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--black) 0%, transparent 30%),
+                  linear-gradient(to top, var(--black) 0%, transparent 35%);
+    }
+    .hero__visual-text {
+      position: absolute;
+      bottom: 3rem;
+      right: 2.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(59,130,246,0.4);
+      writing-mode: vertical-rl;
+    }
+    .hero__scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      z-index: 3;
+      opacity: 0;
+      animation: fadeUp 1s ease 1.2s forwards;
+    }
+    .hero__scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--steel-blue), transparent);
+      animation: scrollLine 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0% { transform: scaleY(0); transform-origin: top; }
+      50% { transform: scaleY(1); transform-origin: top; }
+      51% { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Work Section ─────────────────────────────────────── */
+    .work-section { background: var(--black); }
+    .work-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5px;
+      margin-top: 4rem;
+    }
+    .work-item {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      padding: 3.5rem;
+      transition: border-color var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .work-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 0;
+      background: var(--bright-blue);
+      transition: height var(--transition);
+    }
+    .work-item:hover::before { height: 100%; }
+    .work-item:hover { border-color: rgba(59,130,246,0.3); }
+    .work-item__number {
+      font-family: var(--ff-serif);
+      font-size: 4rem;
+      color: rgba(37,99,235,0.12);
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 2rem;
+    }
+    .work-item__title {
+      font-family: var(--ff-serif);
+      font-size: 1.8rem;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
+    .work-item__text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ── Brands Section ───────────────────────────────────── */
+    .brands-section { background: var(--deep-blue); }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .brand-card {
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2.75rem;
+      transition: border-color var(--transition), transform var(--transition);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .brand-card:hover {
+      border-color: rgba(59,130,246,0.35);
+      transform: translateY(-6px);
+    }
+    .brand-card__icon {
+      width: 44px; height: 44px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--ff-serif);
+      font-size: 1.1rem;
+      color: var(--steel-blue);
+      letter-spacing: 0.06em;
+    }
+    .brand-card__name {
+      font-family: var(--ff-serif);
+      font-size: 1.5rem;
+      color: var(--white);
+      font-weight: 400;
+    }
+    .brand-card__tagline {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--steel-blue);
+    }
+    .brand-card__text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.85;
+      flex: 1;
+    }
+
+    /* ── Executive Support Section ────────────────────────── */
+    .exec-section {
+      background: var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+    .exec-section::before {
+      content: '';
+      position: absolute;
+      right: -200px; top: -200px;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.07) 0%, transparent 70%);
+    }
+    .exec-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+    .exec-services {
+      margin: 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .exec-service-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      color: var(--off-white);
+      padding: 0.85rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: border-color var(--transition), padding var(--transition);
+    }
+    .exec-service-item:hover {
+      border-color: rgba(59,130,246,0.35);
+      padding-left: 1.75rem;
+    }
+    .exec-service-item::before {
+      content: '';
+      width: 5px; height: 5px;
+      background: var(--steel-blue);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .exec-visual {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 3rem;
+    }
+    .exec-visual__quote {
+      font-family: var(--ff-serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--off-white);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .exec-visual__quote::before {
+      content: '"';
+      font-size: 4rem;
+      color: rgba(37,99,235,0.2);
+      line-height: 0;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .exec-visual__detail {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ── Work With Me ─────────────────────────────────────── */
+    .wwm-section {
+      background: var(--deep-blue);
+      text-align: center;
+      position: relative;
+    }
+    .wwm-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(37,99,235,0.07) 0%, transparent 70%);
+    }
+    .wwm-section .container { position: relative; z-index: 1; }
+    .wwm-section .section-label { justify-content: center; }
+    .wwm-section .section-label::before { display: none; }
+    .wwm-section .section-text { margin: 1.5rem auto 3rem; text-align: center; }
+    .wwm-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero__content { padding: 8rem 1.5rem 4rem; max-width: 100%; }
+      .hero__visual { height: 55vw; min-height: 320px; }
+      .work-grid { grid-template-columns: 1fr; }
+      .brands-grid { grid-template-columns: 1fr 1fr; }
+      .exec-layout { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 600px) {
+      .brands-grid { grid-template-columns: 1fr; }
+      .hero__content { padding-right: 1.5rem; }
+      .hero__portrait { width: 260px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="executive-support.html">Executive Support</a></li>
+      <li><a href="work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="brands.html">Brands</a>
+    <a href="executive-support.html">Executive Support</a>
+    <a href="work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">Based in Nigeria &amp; beyond</p>
+      <h1 class="hero__name">Princess<span>Omoragbon</span></h1>
+      <div class="hero__roles">
+        <span>Lifestyle Videographer</span>
+        <span class="dot">·</span>
+        <span>Video Editor</span>
+        <span class="dot">·</span>
+        <span>Writer</span>
+        <span class="dot">·</span>
+        <span>Entrepreneur</span>
+      </div>
+      <p class="hero__tagline">Creative work, practical systems</p>
+      <p class="hero__bio">
+        I value depth, learning, and intentional growth. Much of how I live and think is shaped by reflection and curiosity, and this space brings together the ideas, projects, and expressions that emerge from that process.
+      </p>
+      <div class="hero__actions">
+        <a href="work.html" class="btn btn--primary">Explore My Work</a>
+        <a href="work-with-me.html" class="btn btn--outline">Work With Me</a>
+      </div>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__visual-inner">
+        <div class="hero__portrait">
+          <svg viewBox="0 0 340 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 520 C60 440, 40 400, 50 330 C60 260, 100 240, 170 240 C240 240, 280 260, 290 330 C300 400, 280 440, 280 520Z" fill="url(#bodyGrad)" />
+            <rect x="148" y="185" width="44" height="65" rx="8" fill="url(#skinGrad)" />
+            <ellipse cx="170" cy="155" rx="68" ry="78" fill="url(#skinGrad)" />
+            <path d="M102 140 C90 80, 110 30, 170 25 C230 20, 255 80, 245 140 C230 110, 200 95, 170 95 C140 95, 115 110, 102 140Z" fill="url(#hairGrad)" />
+            <path d="M102 140 C95 165, 95 180, 100 195 C90 190, 78 175, 80 150 Z" fill="url(#hairGrad)" />
+            <path d="M238 140 C245 165, 245 180, 240 195 C250 190, 262 175, 260 150 Z" fill="url(#hairGrad)" />
+            <path d="M50 330 C45 295, 55 270, 80 260 L170 250 L260 260 C285 270, 295 295, 290 330Z" fill="url(#clothGrad)" opacity="0.6"/>
+            <defs>
+              <linearGradient id="bodyGrad" x1="170" y1="240" x2="170" y2="520" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1a3a6e"/><stop offset="100%" stop-color="#0d1f3c"/>
+              </linearGradient>
+              <linearGradient id="skinGrad" x1="170" y1="80" x2="170" y2="240" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#8B6048"/><stop offset="100%" stop-color="#6B4830"/>
+              </linearGradient>
+              <linearGradient id="hairGrad" x1="170" y1="25" x2="170" y2="195" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#1a1008"/><stop offset="100%" stop-color="#111"/>
+              </linearGradient>
+              <linearGradient id="clothGrad" x1="170" y1="250" x2="170" y2="340" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#0b1220"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="hero__visual-overlay"></div>
+      </div>
+      <p class="hero__visual-text">Princess Omoragbon 2025</p>
+    </div>
+
+    <div class="hero__scroll">
+      <div class="hero__scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <section class="work-section" id="work">
+    <div class="container">
+      <p class="section-label reveal">My Work</p>
+      <h2 class="section-title reveal">What I do</h2>
+      <div class="work-grid" data-stagger>
+        <div class="work-item reveal">
+          <div class="work-item__number">01</div>
+          <h3 class="work-item__title">Lifestyle Videography &amp; Video Editing</h3>
+          <p class="work-item__text">I capture life as it unfolds, real moments, real emotions, and experiences people can recognise themselves in. My approach is simple and intentional, allowing meaning to surface naturally.</p>
+          <a href="work.html#videography" class="btn btn--ghost">View Video Work →</a>
+        </div>
+        <div class="work-item reveal">
+          <div class="work-item__number">02</div>
+          <h3 class="work-item__title">Screenwriting &amp; Creative Writing</h3>
+          <p class="work-item__text">I explore ideas, emotions, faith, and human experience through words. I share selected writing samples online to offer insight into my voice, thought process, and storytelling style.</p>
+          <a href="work.html#writing" class="btn btn--ghost">Read Writing Samples →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="brands-section" id="brands">
+    <div class="container">
+      <p class="section-label reveal">Brands</p>
+      <h2 class="section-title reveal">Three Ventures</h2>
+      <p class="section-text reveal">Each brand emerged from something personal, a creative urge, a practical need, a lesson learned.</p>
+      <div class="brands-grid" data-stagger>
+        <div class="brand-card reveal">
+          <div class="brand-card__icon">P</div>
+          <p class="brand-card__tagline">Poetry &amp; Storytelling</p>
+          <h3 class="brand-card__name">Poemetric</h3>
+          <p class="brand-card__text">Poemetric began as a personal love for words and expression and grew into a space for poetry and storytelling. It has evolved into a collaborative anthology featuring writers from different parts of the world.</p>
+          <a href="brands/poemetric.html" class="btn btn--ghost">Explore Poemetric →</a>
+        </div>
+        <div class="brand-card reveal">
+          <div class="brand-card__icon">H</div>
+          <p class="brand-card__tagline">Hair Protection Kit</p>
+          <h3 class="brand-card__name">HPK</h3>
+          <p class="brand-card__text">HPK was created from the understanding that hair care is also about protection. Through silk-based tools and intentional choices, the brand supports healthier hair by preserving moisture, styles, and effort.</p>
+          <a href="brands/hpk.html" class="btn btn--ghost">Visit HPK →</a>
+        </div>
+        <div class="brand-card reveal">
+          <div class="brand-card__icon">R</div>
+          <p class="brand-card__tagline">Learn, Don't Outsource</p>
+          <h3 class="brand-card__name">Research Aid</h3>
+          <p class="brand-card__text">Research Aid was born from overcoming my own fear of research writing. After learning the process and succeeding, it became a space that guides undergraduates through their projects with clarity, confidence, and academic integrity.</p>
+          <a href="brands/research-aid.html" class="btn btn--ghost">Explore Research Aid →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="exec-section" id="executive-support">
+    <div class="container">
+      <div class="exec-layout">
+        <div>
+          <p class="section-label reveal">Executive Support</p>
+          <h2 class="section-title reveal">Virtual Assistant &amp;<br/>Administrative Manager</h2>
+          <p class="section-text reveal">I support CEOs and founders by bringing structure and direction to their work. As a virtual assistant and administrative manager, I align strategy, systems, operations, and workflows so teams can function with clarity and focus.</p>
+          <div class="exec-services reveal">
+            <div class="exec-service-item">Administrative management</div>
+            <div class="exec-service-item">Workflow organisation</div>
+            <div class="exec-service-item">Strategic coordination</div>
+            <div class="exec-service-item">Operational support</div>
+            <div class="exec-service-item">Systems implementation</div>
+          </div>
+          <div class="reveal" style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.5rem">
+            <a href="executive-support.html" class="btn btn--primary">View Executive Support Details</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="exec-visual">
+            <div class="exec-visual__quote">Structure creates freedom. When systems are clear, people can do their best work.</div>
+            <p class="exec-visual__detail">Virtual Assistance · Administrative Management</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="wwm-section" id="work-with-me">
+    <div class="container">
+      <p class="section-label reveal">Work With Me</p>
+      <h2 class="section-title reveal">Let's collaborate</h2>
+      <p class="section-text reveal">If you would like to work together, you can reach me through the form below.</p>
+      <div class="wwm-actions reveal">
+        <a href="https://forms.google.com" target="_blank" rel="noopener" class="btn btn--primary">Specify Services</a>
+        <a href="work-with-me.html" class="btn btn--outline">Reach Out</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#" target="_blank">Instagram</a><span>·</span>
+      <a href="#" target="_blank">TikTok</a><span>·</span>
+      <a href="#" target="_blank">YouTube</a><span>·</span>
+      <a href="#" target="_blank">LinkedIn</a><span>·</span>
+      <a href="#" target="_blank">Threads</a><span>·</span>
+      <a href="#" target="_blank">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HPK — Hair Protection Kit</title>
+  <meta name="description" content="HPK is a silk-based hair protection brand by Princess Omoragbon, focused on preserving moisture, styles, and effort." />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .brand-hero {
+      min-height: 50vh;
+      display: flex; align-items: flex-end;
+      padding: 8rem 0 5rem;
+      background: linear-gradient(160deg, #0a1428 0%, var(--black) 100%);
+      position: relative; overflow: hidden;
+    }
+    .brand-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 20% 60%, rgba(37,99,235,0.1) 0%, transparent 70%);
+    }
+    .brand-hero__letter {
+      position: absolute; right: 5%; bottom: -2rem;
+      font-family: var(--ff-serif); font-size: clamp(8rem, 18vw, 18rem);
+      color: rgba(37,99,235,0.05); font-weight: 300; line-height: 1; user-select: none;
+    }
+    .brand-section { padding: 5rem 0; border-bottom: 1px solid var(--border); }
+    .brand-section:last-of-type { border-bottom: none; }
+    .product-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .product-pillars { display: flex; flex-direction: column; gap: 1rem; margin: 2.5rem 0; }
+    .pillar {
+      display: flex; gap: 1.5rem; align-items: flex-start;
+      padding: 1.5rem; background: var(--deep-blue);
+      border: 1px solid var(--border); border-radius: 3px;
+      transition: border-color var(--transition);
+    }
+    .pillar:hover { border-color: rgba(59,130,246,0.35); }
+    .pillar__icon { font-family: var(--ff-serif); font-size: 1.5rem; color: rgba(59,130,246,0.5); flex-shrink: 0; margin-top: 2px; }
+    .pillar__title { font-family: var(--ff-serif); font-size: 1.05rem; color: var(--white); margin-bottom: 0.3rem; }
+    .pillar__text { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+    .hpk-visual {
+      background: var(--deep-blue); border: 1px solid var(--border); border-radius: 3px;
+      padding: 3rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .hpk-visual::before {
+      content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+      background: radial-gradient(circle at 50% 50%, rgba(37,99,235,0.08) 0%, transparent 60%);
+    }
+    .hpk-visual__silk { font-family: var(--ff-serif); font-size: 5rem; color: rgba(59,130,246,0.2); margin-bottom: 1.5rem; position: relative; z-index: 1; }
+    @media (max-width: 900px) { .product-layout { grid-template-columns: 1fr; gap: 2.5rem; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="../index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../work.html">Work</a></li>
+      <li><a href="../brands.html" class="active">Brands</a></li>
+      <li><a href="../executive-support.html">Executive Support</a></li>
+      <li><a href="../work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="../index.html">Home</a><a href="../work.html">Work</a>
+    <a href="../brands.html">Brands</a><a href="../executive-support.html">Executive Support</a>
+    <a href="../work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="brand-hero">
+    <div class="container">
+      <div style="position: relative; z-index: 2">
+        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--steel-blue); margin-bottom: 1rem;">← <a href="../brands.html" style="color: var(--steel-blue)">All Brands</a></p>
+        <p style="font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem;">Hair Protection Kit</p>
+        <h1 style="font-family: var(--ff-serif); font-size: clamp(3.5rem, 8vw, 7rem); font-weight: 300; color: var(--white); line-height: 1;">HPK</h1>
+        <p style="margin-top: 1.25rem; font-family: var(--ff-serif); font-style: italic; color: var(--muted); font-size: 1.1rem; max-width: 500px;">Silk-based tools designed to protect your hair, preserve your effort.</p>
+      </div>
+    </div>
+    <div class="brand-hero__letter">H</div>
+  </section>
+
+  <section class="brand-section" style="background: var(--black);">
+    <div class="container">
+      <div class="product-layout">
+        <div class="reveal">
+          <p class="section-label">The Philosophy</p>
+          <h2 class="section-title">Protection is care</h2>
+          <p class="section-text">HPK was created from the understanding that hair care is also about protection. Through silk-based tools and intentional choices, the brand supports healthier hair by preserving moisture, styles, and effort.</p>
+          <p class="section-text" style="margin-top: 1.5rem;">Every product is designed with the reality of Black hair in mind: the time, effort, and care that goes into styling, and the need for tools that support rather than sabotage that effort.</p>
+          <div class="product-pillars">
+            <div class="pillar reveal"><span class="pillar__icon">✦</span><div><p class="pillar__title">Moisture Preservation</p><p class="pillar__text">Silk reduces friction and prevents moisture loss that cotton alternatives cause overnight.</p></div></div>
+            <div class="pillar reveal"><span class="pillar__icon">✦</span><div><p class="pillar__title">Style Longevity</p><p class="pillar__text">Protect braids, twists, locs, and natural styles so they last longer and look better.</p></div></div>
+            <div class="pillar reveal"><span class="pillar__icon">✦</span><div><p class="pillar__title">Intentional Design</p><p class="pillar__text">Every piece is crafted with purpose — functional, beautiful, and made to last.</p></div></div>
+          </div>
+        </div>
+        <div class="hpk-visual reveal">
+          <div class="hpk-visual__silk">HPK</div>
+          <h3 style="font-family: var(--ff-serif); font-size: 1.35rem; color: var(--white); margin-bottom: 1rem; position: relative; z-index: 1;">Interested in HPK?</h3>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.85; margin-bottom: 1.75rem; position: relative; z-index: 1;">For product information, stockist enquiries, or partnership opportunities, reach out directly.</p>
+          <a href="../work-with-me.html" class="btn btn--primary" style="position: relative; z-index: 1;">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

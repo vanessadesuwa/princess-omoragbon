@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work With Me — Princess Omoragbon</title>
+  <meta name="description" content="Get in touch with Princess Omoragbon to collaborate on video, writing, or executive support." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .wwm-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+      padding: var(--section-gap) 0;
+    }
+    .wwm-options { display: flex; flex-direction: column; gap: 1.25rem; margin: 3rem 0; }
+    .wwm-option {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 1.75rem 2rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1.5rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .wwm-option:hover { border-color: rgba(59,130,246,0.35); transform: translateX(6px); }
+    .wwm-option__num { font-family: var(--ff-serif); font-size: 0.75rem; color: var(--steel-blue); margin-bottom: 0.4rem; }
+    .wwm-option__title { font-family: var(--ff-serif); font-size: 1.2rem; color: var(--white); }
+    .wwm-option__sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.25rem; }
+    .wwm-option__arrow { color: var(--steel-blue); font-size: 1.25rem; flex-shrink: 0; }
+    .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); }
+    .form-group input, .form-group textarea, .form-group select {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.9rem 1.1rem;
+      color: var(--off-white);
+      font-family: var(--ff-sans);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color var(--transition);
+      appearance: none;
+    }
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233b82f6' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; cursor: pointer;
+    }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(154,160,173,0.5); }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--steel-blue); }
+    .form-group textarea { resize: vertical; min-height: 130px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-success { display: none; text-align: center; padding: 3rem 2rem; background: var(--deep-blue); border: 1px solid rgba(59,130,246,0.3); border-radius: 3px; }
+    .form-success__icon { font-family: var(--ff-serif); font-size: 3rem; color: var(--steel-blue); margin-bottom: 1rem; }
+    @media (max-width: 900px) { .wwm-layout { grid-template-columns: 1fr; gap: 3rem; } .form-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="executive-support.html">Executive Support</a></li>
+      <li><a href="work-with-me.html" class="nav__cta active">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a><a href="work.html">Work</a>
+    <a href="brands.html">Brands</a><a href="executive-support.html">Executive Support</a>
+    <a href="work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <p class="page-hero__label">Get In Touch</p>
+        <h1 class="page-hero__title">Work With Me</h1>
+        <p class="page-hero__sub">If you would like to work together, you can reach me through the form below.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: var(--black);">
+    <div class="container">
+      <div class="wwm-layout">
+        <div>
+          <p class="section-label reveal">What I offer</p>
+          <h2 class="section-title reveal">Areas of Collaboration</h2>
+          <p class="section-text reveal" style="margin-bottom: 0">Whether you need a videographer, a writer, an executive support partner, or all three — I'd love to hear about your project.</p>
+          <div class="wwm-options reveal" data-stagger>
+            <div class="wwm-option"><div class="wwm-option__left"><p class="wwm-option__num">01</p><p class="wwm-option__title">Lifestyle Videography</p><p class="wwm-option__sub">Video production &amp; editing for personal brands, events, content</p></div><span class="wwm-option__arrow">→</span></div>
+            <div class="wwm-option"><div class="wwm-option__left"><p class="wwm-option__num">02</p><p class="wwm-option__title">Creative Writing</p><p class="wwm-option__sub">Screenwriting, essays, narrative strategy, brand storytelling</p></div><span class="wwm-option__arrow">→</span></div>
+            <div class="wwm-option"><div class="wwm-option__left"><p class="wwm-option__num">03</p><p class="wwm-option__title">Executive Support</p><p class="wwm-option__sub">Virtual assistance, admin management, operations, and systems</p></div><span class="wwm-option__arrow">→</span></div>
+            <div class="wwm-option"><div class="wwm-option__left"><p class="wwm-option__num">04</p><p class="wwm-option__title">Brand Collaboration</p><p class="wwm-option__sub">Poemetric, HPK, Research Aid partnerships</p></div><span class="wwm-option__arrow">→</span></div>
+          </div>
+          <div class="reveal">
+            <a href="https://forms.google.com" target="_blank" rel="noopener" class="btn btn--primary" style="width: fit-content">Specify Services via Google Form ↗</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="section-label">Reach Out Directly</p>
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group"><label for="fname">First Name</label><input type="text" id="fname" name="fname" placeholder="Your first name" required /></div>
+              <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" name="lname" placeholder="Your last name" required /></div>
+            </div>
+            <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" placeholder="your@email.com" required /></div>
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select an area...</option>
+                <option>Lifestyle Videography &amp; Video Editing</option>
+                <option>Screenwriting &amp; Creative Writing</option>
+                <option>Executive Support (VA &amp; Admin)</option>
+                <option>Brand Collaboration</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me about your project or how you'd like to work together..." required></textarea></div>
+            <button type="submit" class="btn btn--primary">Send Message</button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success__icon">✦</div>
+            <h3 style="font-family: var(--ff-serif); font-size: 1.5rem; color: var(--white); margin-bottom: 0.75rem;">Message received</h3>
+            <p style="font-size: 0.9rem; color: var(--muted);">Thank you for reaching out. I'll be in touch soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        form.style.display = 'none';
+        success.style.display = 'block';
+      });
+    }
+  </script>
+</body>
+</html>

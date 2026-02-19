@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Executive Support — Princess Omoragbon</title>
+  <meta name="description" content="Virtual assistant and administrative manager services by Princess Omoragbon for CEOs and founders." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .exec-page { background: var(--black); }
+    .exec-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      padding: var(--section-gap) 0;
+      align-items: start;
+    }
+    .exec-services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 3rem 0;
+    }
+    .exec-service-card {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      padding: 2rem;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .exec-service-card:hover { border-color: rgba(59,130,246,0.35); transform: translateY(-4px); }
+    .exec-service-card__icon {
+      width: 36px; height: 36px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+    .exec-service-card__icon svg { width: 16px; height: 16px; stroke: var(--steel-blue); }
+    .exec-service-card__title { font-family: var(--ff-serif); font-size: 1.1rem; color: var(--white); margin-bottom: 0.5rem; }
+    .exec-service-card__text { font-size: 0.82rem; color: var(--muted); line-height: 1.7; }
+    .exec-cta-strip {
+      background: var(--mid-blue);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 5rem 0;
+      text-align: center;
+    }
+    .exec-cta-strip .section-label { justify-content: center; }
+    .exec-cta-strip .section-label::before { display: none; }
+    @media (max-width: 900px) {
+      .exec-intro { grid-template-columns: 1fr; gap: 3rem; }
+      .exec-services-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="executive-support.html" class="active">Executive Support</a></li>
+      <li><a href="work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a><a href="work.html">Work</a>
+    <a href="brands.html">Brands</a><a href="executive-support.html">Executive Support</a>
+    <a href="work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <p class="page-hero__label">Professional Services</p>
+        <h1 class="page-hero__title">Executive Support</h1>
+        <p class="page-hero__sub">Virtual Assistant &amp; Administrative Manager for CEOs and Founders.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="exec-page">
+    <div class="container">
+      <div class="exec-intro">
+        <div class="reveal">
+          <p class="section-label">The Role</p>
+          <h2 class="section-title">Structure that enables teams to do their best work</h2>
+          <p class="section-text" style="margin-bottom: 2rem">I support CEOs and founders by bringing structure and direction to their work. As a virtual assistant and administrative manager, I align strategy, systems, operations, and workflows so teams can function with clarity and focus.</p>
+          <p class="section-text">My approach is grounded in understanding how leaders think and what they need. I work behind the scenes to set up systems that create ease, so you can lead with intention.</p>
+          <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <a href="work-with-me.html" class="btn btn--primary">Work With Me</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn--outline">Connect on LinkedIn ↗</a>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="exec-services-grid" data-stagger>
+            <div class="exec-service-card reveal">
+              <div class="exec-service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <h3 class="exec-service-card__title">Administrative Management</h3>
+              <p class="exec-service-card__text">Calendar, inbox, and coordination handled with care and precision.</p>
+            </div>
+            <div class="exec-service-card reveal">
+              <div class="exec-service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+              </div>
+              <h3 class="exec-service-card__title">Workflow Organisation</h3>
+              <p class="exec-service-card__text">Mapping, optimising, and documenting how work moves through your team.</p>
+            </div>
+            <div class="exec-service-card reveal">
+              <div class="exec-service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+              </div>
+              <h3 class="exec-service-card__title">Strategic Coordination</h3>
+              <p class="exec-service-card__text">Translating vision into action plans and ensuring alignment across stakeholders.</p>
+            </div>
+            <div class="exec-service-card reveal">
+              <div class="exec-service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              </div>
+              <h3 class="exec-service-card__title">Operational Support</h3>
+              <p class="exec-service-card__text">Day-to-day operational management so you stay focused on the bigger picture.</p>
+            </div>
+            <div class="exec-service-card reveal" style="grid-column: 1/-1;">
+              <div class="exec-service-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <h3 class="exec-service-card__title">Systems Implementation</h3>
+              <p class="exec-service-card__text">Setting up and integrating the tools and platforms that make your operations run smoothly: project management software, communication systems, automation, and documentation frameworks.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="exec-cta-strip">
+    <div class="container">
+      <p class="section-label reveal">Ready to work together?</p>
+      <h2 class="section-title reveal" style="max-width:500px; margin: 0 auto 1.5rem">Let's bring structure to your work</h2>
+      <p class="section-text reveal" style="margin: 0 auto 2.5rem; text-align:center">Reach out to discuss how executive support can help you and your team.</p>
+      <div class="reveal" style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+        <a href="work-with-me.html" class="btn btn--primary">Work With Me</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn--outline">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

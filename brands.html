@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brands — Princess Omoragbon</title>
+  <meta name="description" content="Three brands born from personal experience: Poemetric, HPK, and Research Aid." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .brands-grid-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
+    }
+    .brand-full-card {
+      background: var(--deep-blue);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .brand-full-card:hover { border-color: rgba(59,130,246,0.35); transform: translateY(-6px); }
+    .brand-full-card__header {
+      padding: 2.5rem;
+      background: linear-gradient(135deg, var(--mid-blue), var(--deep-blue));
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .brand-full-card__letter { font-family: var(--ff-serif); font-size: 4rem; font-weight: 300; color: rgba(59,130,246,0.25); line-height: 1; }
+    .brand-full-card__name { font-family: var(--ff-serif); font-size: 1.6rem; color: var(--white); }
+    .brand-full-card__tag { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--steel-blue); }
+    .brand-full-card__body { padding: 2.5rem; flex: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+    .brand-full-card__text { font-size: 0.88rem; color: var(--muted); line-height: 1.85; flex: 1; }
+    @media (max-width: 900px) { .brands-grid-full { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .brands-grid-full { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="brands.html" class="active">Brands</a></li>
+      <li><a href="executive-support.html">Executive Support</a></li>
+      <li><a href="work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a><a href="work.html">Work</a>
+    <a href="brands.html">Brands</a><a href="executive-support.html">Executive Support</a>
+    <a href="work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <p class="page-hero__label">Ventures</p>
+        <h1 class="page-hero__title">Brands</h1>
+        <p class="page-hero__sub">Three ventures, each born from something personal, a creative urge, a practical need, a lesson learned.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--section-gap) 0; background: var(--black);">
+    <div class="container">
+      <div class="brands-grid-full" data-stagger>
+        <div class="brand-full-card reveal">
+          <div class="brand-full-card__header">
+            <div class="brand-full-card__letter">P</div>
+            <h2 class="brand-full-card__name">Poemetric</h2>
+            <p class="brand-full-card__tag">Poetry &amp; Storytelling</p>
+          </div>
+          <div class="brand-full-card__body">
+            <p class="brand-full-card__text">Poemetric began as a personal love for words and expression and grew into a space for poetry and storytelling. It has evolved into a collaborative anthology featuring writers from different parts of the world.</p>
+            <a href="brands/poemetric.html" class="btn btn--outline">Explore Poemetric →</a>
+          </div>
+        </div>
+        <div class="brand-full-card reveal">
+          <div class="brand-full-card__header">
+            <div class="brand-full-card__letter">H</div>
+            <h2 class="brand-full-card__name">HPK</h2>
+            <p class="brand-full-card__tag">Hair Protection Kit</p>
+          </div>
+          <div class="brand-full-card__body">
+            <p class="brand-full-card__text">HPK was created from the understanding that hair care is also about protection. Through silk-based tools and intentional choices, the brand supports healthier hair by preserving moisture, styles, and effort.</p>
+            <a href="brands/hpk.html" class="btn btn--outline">Visit HPK →</a>
+          </div>
+        </div>
+        <div class="brand-full-card reveal">
+          <div class="brand-full-card__header">
+            <div class="brand-full-card__letter">R</div>
+            <h2 class="brand-full-card__name">Research Aid</h2>
+            <p class="brand-full-card__tag">Learn, Don't Outsource</p>
+          </div>
+          <div class="brand-full-card__body">
+            <p class="brand-full-card__text">Research Aid was born from overcoming my own fear of research writing. After learning the process and succeeding, it became a space that guides undergraduates through their projects with clarity, confidence, and academic integrity.</p>
+            <a href="brands/research-aid.html" class="btn btn--outline">Explore Research Aid →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

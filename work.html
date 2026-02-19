@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Work — Princess Omoragbon</title>
+  <meta name="description" content="Lifestyle videography, video editing, screenwriting and creative writing by Princess Omoragbon." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .work-detail {
+      padding: 6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .work-detail:last-of-type { border-bottom: none; }
+    .work-detail__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .work-detail__layout.reversed { direction: rtl; }
+    .work-detail__layout.reversed > * { direction: ltr; }
+    .work-detail__label {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--steel-blue);
+      margin-bottom: 0.75rem;
+    }
+    .work-detail__title {
+      font-family: var(--ff-serif);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+    .work-detail__text {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+    }
+    .work-visual {
+      aspect-ratio: 4/3;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      background: var(--deep-blue);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .work-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 70% at 50% 50%, rgba(37,99,235,0.1) 0%, transparent 70%);
+    }
+    .work-visual__icon {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .work-visual__icon svg { width: 64px; height: 64px; opacity: 0.25; margin: 0 auto 1rem; }
+    .work-visual__icon p { font-family: var(--ff-serif); font-size: 1rem; font-style: italic; color: var(--muted); }
+    .process-list { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+    .process-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .process-item:last-child { border-bottom: none; }
+    .process-item__num { font-family: var(--ff-serif); font-size: 0.85rem; color: var(--steel-blue); min-width: 28px; padding-top: 2px; }
+    .process-item__text { font-size: 0.9rem; color: var(--off-white); }
+    .process-item__sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.3rem; }
+    @media (max-width: 900px) {
+      .work-detail__layout { grid-template-columns: 1fr; gap: 3rem; }
+      .work-detail__layout.reversed { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">Princess <span>Omoragbon</span></a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="work.html" class="active">Work</a></li>
+      <li><a href="brands.html">Brands</a></li>
+      <li><a href="executive-support.html">Executive Support</a></li>
+      <li><a href="work-with-me.html" class="nav__cta">Work With Me</a></li>
+    </ul>
+    <div class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+  <div class="nav__drawer" id="drawer">
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="brands.html">Brands</a>
+    <a href="executive-support.html">Executive Support</a>
+    <a href="work-with-me.html">Work With Me</a>
+  </div>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__content">
+        <p class="page-hero__label">Creative Work</p>
+        <h1 class="page-hero__title">My Work</h1>
+        <p class="page-hero__sub">Rooted in honesty, shaped by observation, and expressed with intention.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-detail" id="videography">
+    <div class="container">
+      <div class="work-detail__layout">
+        <div class="reveal">
+          <p class="work-detail__label">01 · Visual Storytelling</p>
+          <h2 class="work-detail__title">Lifestyle Videography &amp; Video Editing</h2>
+          <p class="work-detail__text">I capture life as it unfolds, real moments, real emotions, and experiences people can recognise themselves in. My approach is simple and intentional, allowing meaning to surface naturally.</p>
+          <p class="work-detail__text">From concept to final cut, every project is shaped by a commitment to truth and clarity. I work across documentaries, personal brand films, and lifestyle content that speaks without overstating.</p>
+          <div class="process-list">
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Lifestyle &amp; personal brand films</p><p class="process-item__sub">Authentic storytelling for individuals and creators</p></div>
+            </div>
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Video editing &amp; post-production</p><p class="process-item__sub">Colour grading, sound design, and narrative structure</p></div>
+            </div>
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Short-form social content</p><p class="process-item__sub">TikTok, Instagram Reels, YouTube Shorts</p></div>
+            </div>
+          </div>
+          <div style="margin-top: 2.5rem">
+            <a href="work-with-me.html" class="btn btn--primary">Work With Me on a Video Project</a>
+          </div>
+        </div>
+        <div class="work-visual reveal">
+          <div class="work-visual__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="14" width="42" height="30" rx="3" stroke="#3b82f6" stroke-width="1.5"/>
+              <path d="M46 24L60 17V47L46 38V24Z" stroke="#3b82f6" stroke-width="1.5" stroke-linejoin="round"/>
+              <circle cx="25" cy="29" r="6" stroke="#3b82f6" stroke-width="1.5"/>
+              <path d="M23 27L29 29L23 31V27Z" fill="#3b82f6"/>
+            </svg>
+            <p>Video samples available on request</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="work-detail" id="writing" style="background: var(--deep-blue)">
+    <div class="container">
+      <div class="work-detail__layout reversed">
+        <div class="reveal">
+          <p class="work-detail__label">02 · The Written Word</p>
+          <h2 class="work-detail__title">Screenwriting &amp; Creative Writing</h2>
+          <p class="work-detail__text">I explore ideas, emotions, faith, and human experience through words. I share selected writing samples online to offer insight into my voice, thought process, and storytelling style.</p>
+          <p class="work-detail__text">Writing, for me, is a practice of honesty. Whether it is a screenplay, an essay, or a piece of fiction, the goal is the same: to say something true about who we are.</p>
+          <div class="process-list">
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Screenwriting &amp; scripts</p><p class="process-item__sub">Short films, series pilots, and feature concepts</p></div>
+            </div>
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Essays &amp; reflective writing</p><p class="process-item__sub">Ideas, faith, culture, and inner life</p></div>
+            </div>
+            <div class="process-item">
+              <span class="process-item__num">→</span>
+              <div><p class="process-item__text">Content &amp; narrative strategy</p><p class="process-item__sub">Brand voice, editorial direction, storytelling frameworks</p></div>
+            </div>
+          </div>
+          <div style="margin-top: 2.5rem">
+            <a href="work-with-me.html" class="btn btn--primary">Collaborate on Writing</a>
+          </div>
+        </div>
+        <div class="work-visual reveal">
+          <div class="work-visual__icon">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 8H44C46.2 8 48 9.8 48 12V52C48 54.2 46.2 56 44 56H16C13.8 56 12 54.2 12 52V12C12 9.8 13.8 8 16 8Z" stroke="#3b82f6" stroke-width="1.5"/>
+              <line x1="20" y1="22" x2="44" y2="22" stroke="#3b82f6" stroke-width="1.5"/>
+              <line x1="20" y1="30" x2="44" y2="30" stroke="#3b82f6" stroke-width="1.5"/>
+              <line x1="20" y1="38" x2="36" y2="38" stroke="#3b82f6" stroke-width="1.5"/>
+            </svg>
+            <p>Writing samples available on request</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__socials">
+      <a href="#">Instagram</a><span>·</span><a href="#">TikTok</a><span>·</span>
+      <a href="#">YouTube</a><span>·</span><a href="#">LinkedIn</a><span>·</span>
+      <a href="#">Threads</a><span>·</span><a href="#">X</a><span>·</span>
+      <a href="mailto:hello@princessomoragbon.com">Email</a>
+    </div>
+    <p class="footer__copy">&copy; 2025 Princess Omoragbon. All rights reserved.</p>
+    <p class="footer__name">OMORAGBON</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
